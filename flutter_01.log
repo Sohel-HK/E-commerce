@@ -1,0 +1,49 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color attach --machine --device-id=emulator-5554 lib/main.dart
+
+## exception
+
+StateError: Bad state: Future already completed
+
+```
+#0      _AsyncCompleter.complete (dart:async/future_impl.dart:45:31)
+#1      FlutterDevice.connect.<anonymous closure> (package:flutter_tools/src/resident_runner.dart:321:17)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.8.1, on Ubuntu 20.04.3 LTS 5.13.0-30-generic, locale en_US.UTF-8)
+    • Flutter version 2.8.1 at /home/sohel/snap/flutter/common/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 77d935af4d (3 months ago), 2021-12-16 08:37:33 -0800
+    • Engine revision 890a5fca2e
+    • Dart version 2.15.1
+
+[!] Android toolchain - develop for Android devices (Android SDK version 31.0.0)
+    • Android SDK at /home/sohel/Android/Sdk
+    • Platform android-31, build-tools 31.0.0
+    • Java binary at: /snap/android-studio/119/android-studio/jre/bin/java
+    • Java version OpenJDK Runtime Environment (build 11.0.11+0-b60-7590822)
+    ! Some Android licenses not accepted.  To resolve this, run: flutter doctor --android-licenses
+
+[✓] Chrome - develop for the web
+    • Chrome at google-chrome
+
+[✓] Android Studio (version 2021.1)
+    • Android Studio at /snap/android-studio/119/android-studio
+    • Flutter plugin version 63.2.2
+    • Dart plugin version 211.7798
+    • Java version OpenJDK Runtime Environment (build 11.0.11+0-b60-7590822)
+
+[✓] Connected device (2 available)
+    • sdk gphone x86 (mobile) • emulator-5554 • android-x86    • Android 11 (API 30) (emulator)
+    • Chrome (web)            • chrome        • web-javascript • Google Chrome 98.0.4758.80
+
+! Doctor found issues in 1 category.
+```
